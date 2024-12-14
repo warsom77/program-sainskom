@@ -115,7 +115,7 @@ Program ini menggunakan Metode Bisection untuk mencari akar persamaan non-linear
 Interval: [-1, 0], Toleransi Error: 0.001, Iterasi Maksimum: 10.
 
 
-## 6. Metode Regula Falsi (Program 3)
+## 6. Metode Regula Falsi
 Program ini menggunakan Metode Regula Falsi untuk mencari akar persamaan `𝑓(𝑥) = 0`. Metode ini menggunakan garis lurus (sekant) untuk memperkirakan akar persamaan.
 [metode_regula_falsi.py](https://github.com/warsom77/program-sainskom/blob/main/src/metode_regula_falsi.py)
 
@@ -152,7 +152,7 @@ Program ini menggunakan Metode Iterasi Sederhana untuk memecahkan persamaan `�
 Toleransi Error: 0.0001, Iterasi Maksimum: 10, Tebakan Awal: −1.
 
 
-## 8. Metode Newton-Raphson (Program 5)
+## 8. Metode Newton-Raphson
 Program ini menggunakan Metode Newton-Raphson untuk menemukan akar persamaan `𝑓(𝑥) = 0` dengan pendekatan iteratif menggunakan turunan pertama dari fungsi.
 [metode_newton_raphson.py](https://github.com/warsom77/program-sainskom/blob/main/src/metode_newton_raphson.py)
 
