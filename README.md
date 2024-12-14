@@ -215,3 +215,149 @@ Program ini menggunakan Metode Polinom Newton untuk interpolasi berdasarkan seju
 
 ### Contoh yang Digunakan:
 Interpolasi pada 𝑎 = 2.5, dengan titik data (x,y).
+
+
+## 12. Metode Iterasi Jacobi
+Program ini mengimplementasikan Metode Iterasi Jacobi, sebuah algoritma untuk menyelesaikan sistem persamaan linear berbentuk `Ax=b`. Berikut adalah penjelasan detail tentang kode ini:
+[Metode_Iterasi_Jacobi.py](https://github.com/warsom77/program-sainskom/blob/main/src/Metode_Iterasi_Jacobi.py)
+
+### Fungsi jacobi:
+Fungsi ini menyelesaikan sistem persamaan linear menggunakan metode iterasi Jacobi.
+
+### Parameter:
+`A`: Matriks koefisien (harus berbentuk matriks persegi).
+`b`: Vektor konstanta.
+`N`: Jumlah iterasi (default: 25).
+`x`: Vektor tebakan awal untuk solusi (default: None, yang berarti akan diisi dengan nol).
+
+### Langkah-langkah Algoritma:
+- Ekstraksi diagonal dari matriks A: Elemen diagonal dari A disimpan dalam vektor D.
+- Matriks A dikurangi elemen diagonalnya menjadi matriks residu R.
+
+### Iterasi Jacobi:
+Pada setiap iterasi, solusi diperbarui menggunakan rumus: `x=b−R⋅x/D` Proses ini dilakukan sebanyak `N` kali.
+
+### Hasil:
+Fungsi mengembalikan vektor solusi `x`.
+
+
+## 13. Matriks
+Program ini menunjukkan berbagai operasi pada matriks menggunakan pustaka NumPy. 
+[Matriks.py](https://github.com/warsom77/program-sainskom/blob/main/src/Matriks.py)
+### Berikut operasi-operasinya:
+### - Operasi Penjumlahan dan Pengurangan Matriks
+#### Matriks:
+```
+A = [4, 5, 6], 
+    [7, 8, 9]
+B = [1, 2, 3],
+    [1, 2, 3]
+```
+
+#### Operasi:
+- Penjumlahan: `A+B`
+- Pengurangan: `A−B` 
+
+#### Hasil:
+Penjumlahan dan pengurangan dilakukan elemen-per-elemen karena kedua matriks memiliki dimensi yang sama (2x3).
+
+### - Perkalian Matriks
+#### Matriks:
+```
+A = [1, 2], 
+    [3, 4],
+    [5, 6]  # 3x2
+B = [10, 12, 12],
+    [13, 14, 15]  # 2x3
+```
+
+#### Operasi:
+Perkalian matriks: `A⋅BA⋅B` menggunakan `A @ B` atau `np.matmul(A, B)`.
+
+#### Hasil:
+Matriks hasil berukuran 3×3, mengikuti aturan dimensi: (3×2).(2×3)=(3×3)
+
+### - Transpose Matriks
+#### Matriks:
+```
+A = [1, 2], 
+    [3, 4],
+    [5, 6]
+```
+
+#### Operasi:
+Transpose matriks ATAT menggunakan `A.transpose()`.
+
+#### Hasil:
+Matriks diubah dari 3×2 menjadi 2×3.
+
+### - Determinan Matriks
+#### Matriks:
+```
+A = [5, 0, 1],
+    [3, 2, 2],
+    [1, 4, 2]
+B = [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+```
+
+#### Operasi:
+Determinan matriks AA dan BB menggunakan `np.linalg.det(A)`.
+
+#### Hasil:
+- Determinan A valid karena A adalah matriks persegi.
+- Determinan B valid tetapi hasilnya 0 (karena B singular).
+
+### - Invers Matriks
+#### Matriks:
+```
+A = [5, 0, 1],
+    [3, 2, 2],
+    [1, 4, 2]  # invertible
+B = [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]  # singular
+```
+
+#### Operasi:
+- Invers matriks A menggunakan `np.linalg.inv(A)`.
+- Invers matriks B menghasilkan error karena B singular (determinan = 0).
+
+### - Verifikasi Invers
+#### Operasi:
+Memverifikasi `A*A^−1` dan `A^−1*A`, yang seharusnya menghasilkan matriks identitas.
+
+#### Hasil:
+Diperoleh matriks identitas II dengan elemen diagonal bernilai 1.
+
+
+## 14. Eliminasi Gauss
+Program ini adalah program Python untuk melakukan eliminasi Gauss. Berikut adalah ringkasan kodenya:
+[Eliminasi_Gauss.py](https://github.com/warsom77/program-sainskom/blob/main/src/Eliminasi_Gauss.py)
+
+### Fungsi utama: 
+`gaussElim(a, b)`: Fungsi ini menerima dua parameter yaiut `a`(matriks koefisien) dan `b`(vektor konstanta).
+
+#### Proses:
+- `Eliminasi maju (Forward Elimination)`: Mengubah matriks menjadi bentuk segitiga atas dengan operasi baris elementer.
+- `Substitusi balik (Backward Substitution)`: Menghitung nilai variabel dari atas ke bawah menggunakan matriks segitiga atas.
+
+### Input awal:
+```
+Matriks a adalah:
+[ 1.0,  1.0,  1.0],
+[ 1.0, -1.0, -1.0],
+[ 1.0, -2.0,  3.0]
+
+Vektor b adalah [1.0, 1.0, -5.0].
+```
+
+### Output:
+- Setelah eliminasi dan substitusi, nilai dari variabel disimpan dalam x.
+- Skrip juga mencetak matriks a setelah diubah, vektor hasil x, dan hasil cek kesalahan numerik dengan menghitung perbedaan [a]{x} - b.
+
+
+### Fitur tambahan:
+- Bagian untuk menghitung determinan matriks ada, tetapi dikomentari.
+- Menggunakan fungsi dari pustaka numpy untuk operasi matriks dan vektor.
