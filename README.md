@@ -240,6 +240,9 @@ Pada setiap iterasi, solusi diperbarui menggunakan rumus: `x=b−R⋅x/D` Proses
 ### Hasil:
 Fungsi mengembalikan vektor solusi `x`.
 
+### Referensi:
+https://www.quantstart.com/articles/Jacobi-Method-in-Python-and-NumPy/
+
 
 ## 13. Matriks
 Program ini menunjukkan berbagai operasi pada matriks menggunakan pustaka NumPy. 
@@ -291,6 +294,8 @@ Transpose matriks ATAT menggunakan `A.transpose()`.
 #### Hasil:
 Matriks diubah dari 3×2 menjadi 2×3.
 
+
+
 ### - Determinan Matriks
 #### Matriks:
 ```
@@ -331,6 +336,9 @@ Memverifikasi `A*A^−1` dan `A^−1*A`, yang seharusnya menghasilkan matriks id
 #### Hasil:
 Diperoleh matriks identitas II dengan elemen diagonal bernilai 1.
 
+### Referensi:
+https://sainsdata.id/pemrograman/python/8519/operasi-aljabar-matriks-dengan-numpy/
+
 
 ## 14. Eliminasi Gauss
 Program ini adalah program Python untuk melakukan eliminasi Gauss. Berikut adalah ringkasan kodenya:
@@ -361,3 +369,6 @@ Vektor b adalah [1.0, 1.0, -5.0].
 ### Fitur tambahan:
 - Bagian untuk menghitung determinan matriks ada, tetapi dikomentari.
 - Menggunakan fungsi dari pustaka numpy untuk operasi matriks dan vektor.
+
+### Referensi:
+https://techgoggler.com/computer-engineering/linear-equations-python-gauss-elimination-method/
